@@ -595,7 +595,7 @@ const u16 sLevelCapFlags[NUM_SOFT_CAPS] =
 };
 
 const u16 sLevelCaps[NUM_SOFT_CAPS] = { 15, 20, 30, 40, 50, 60, 70, 80 };
-const double sLevelCapReduction[7] = { .5, .33, .25, .20, .15, .10, .05 };
+const double sLevelCapReduction[7] = { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0 };
 const double sRelativePartyScaling[27] =
 {
     3.00, 2.75, 2.50, 2.33, 2.25,
@@ -16391,15 +16391,15 @@ void ApplyExperienceMultipliers(s32 *expAmount, u8 expGetterMonId, u8 faintedBat
 	double expMultiplier = GetPkmnExpMultiplier(gPlayerParty[gBattleStruct->expGetterMonId].level);
 
     if (IsTradedMon(&gPlayerParty[expGetterMonId]))
-        *expAmount = (*expAmount * 150) / 100 *expMultiplier;
+        *expAmount = ((*expAmount * 150 ) / 100)*expMultiplier;
     if (holdEffect == HOLD_EFFECT_LUCKY_EGG)
-        *expAmount = (*expAmount * 150) / 100 *expMultiplier;
+        *expAmount = ((*expAmount * 150 ) / 100) *expMultiplier;
     if (B_UNEVOLVED_EXP_MULTIPLIER >= GEN_6 && IsMonPastEvolutionLevel(&gPlayerParty[expGetterMonId]))
-        *expAmount = (*expAmount * 4915) / 4096 *expMultiplier;
+        *expAmount = ((*expAmount * 4915 ) / 4096) *expMultiplier;
     if (B_AFFECTION_MECHANICS == TRUE && GetMonAffectionHearts(&gPlayerParty[expGetterMonId]) >= AFFECTION_FOUR_HEARTS)
-        *expAmount = (*expAmount * 4915) / 4096 *expMultiplier;
+        *expAmount = ((*expAmount * 4915) / 4096) *expMultiplier;
     if (CheckBagHasItem(ITEM_EXP_CHARM, 1)) //is also for other exp boosting Powers if/when implemented
-        *expAmount = (*expAmount * 150) / 100 *expMultiplier;
+        *expAmount = ((*expAmount * 150) / 100)*expMultiplier;
 
     if (B_SCALED_EXP >= GEN_5 && B_SCALED_EXP != GEN_6)
     {
@@ -16412,7 +16412,7 @@ void ApplyExperienceMultipliers(s32 *expAmount, u8 expGetterMonId, u8 faintedBat
         value *= sExperienceScalingFactors[(faintedLevel * 2) + 10];
         value /= sExperienceScalingFactors[faintedLevel + expGetterLevel + 10];
 
-        *expAmount = value + 1 *expMultiplier;
+        *expAmount = (value + 1 )*expMultiplier;
     }
 }
 
