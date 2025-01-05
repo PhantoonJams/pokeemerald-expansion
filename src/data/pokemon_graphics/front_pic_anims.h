@@ -12823,4 +12823,20 @@ SINGLE_ANIMATION(TerapagosStellar);
 #if P_FAMILY_PECHARUNT
 SINGLE_ANIMATION(Pecharunt);
 #endif //P_FAMILY_PECHARUNT
+
+static const union AnimCmd sAnim_Lossum_1[] =
+{
+    ANIMCMD_FRAME(1, 30),
+    ANIMCMD_FRAME(0, 20),
+    ANIMCMD_END,
+};
+SINGLE_ANIMATION(Lossum);
+
+static const union AnimCmd sAnim_Harmint_1[] =
+{
+    ANIMCMD_FRAME(1, 30),
+    ANIMCMD_FRAME(0, 20),
+    ANIMCMD_END,
+};
+SINGLE_ANIMATION(Harmint);
 SINGLE_ANIMATION(Egg);

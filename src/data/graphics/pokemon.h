@@ -26732,6 +26732,20 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
 #endif //OW_POKEMON_OBJECT_EVENTS
 #endif //P_FAMILY_PECHARUNT
 
+   const u32 gMonFrontPic_Lossum[] = INCBIN_U32("graphics/pokemon/lossum/front.4bpp.lz");
+   const u32 gMonBackPic_Lossum[] = INCBIN_U32("graphics/pokemon/lossum/back.4bpp.lz");
+   const u32 gMonPalette_Lossum[] = INCBIN_U32("graphics/pokemon/lossum/normal.gbapal.lz");
+   const u32 gMonShinyPalette_Lossum[] = INCBIN_U32("graphics/pokemon/lossum/shiny.gbapal.lz");
+   const u8 gMonIcon_Lossum[] = INCBIN_U8("graphics/pokemon/lossum/icon.4bpp");
+   const u8 gMonFootprint_Lossum[] = INCBIN_U8("graphics/pokemon/lossum/footprint.1bpp");
+
+   const u32 gMonFrontPic_Harmint[] = INCBIN_U32("graphics/pokemon/harmint/front.4bpp.lz");
+   const u32 gMonBackPic_Harmint[] = INCBIN_U32("graphics/pokemon/harmint/back.4bpp.lz");
+   const u32 gMonPalette_Harmint[] = INCBIN_U32("graphics/pokemon/harmint/normal.gbapal.lz");
+   const u32 gMonShinyPalette_Harmint[] = INCBIN_U32("graphics/pokemon/harmint/shiny.gbapal.lz");
+   const u8 gMonIcon_Harmint[] = INCBIN_U8("graphics/pokemon/harmint/icon.4bpp");
+   const u8 gMonFootprint_Harmint[] = INCBIN_U8("graphics/pokemon/harmint/footprint.1bpp");
+
     const u32 gMonFrontPic_Egg[] = INCBIN_U32("graphics/pokemon/egg/anim_front.4bpp.lz");
     const u32 gMonPalette_Egg[] = INCBIN_U32("graphics/pokemon/egg/normal.gbapal.lz");
     const u8 gMonIcon_Egg[] = INCBIN_U8("graphics/pokemon/egg/icon.4bpp");
